@@ -1,34 +1,51 @@
-<HTml>
-    <head>
-        <script src="ex1.js"></script>
-        <script>
-            //alert("Hello");//write a check function here...
-            //update: the check function should reveal the "removed" text input
-            //if the baggage is overweight
-            //and a button to remove some
-            //the remove function should update the weight
-            //and let the user know when ok to proceed
-            let check=()=>{
-              alert('Checking Baggage weight: '+parseInt(document.getElementById('weight').value));
-              //These should only display if it is actually overweight
-              document.getElementById('removed').style='display:block;'
-              document.getElementById('remB').style='display:block;'
-            }
-            let remove=()=>alert('Removing weight: '+parseInt(document.getElementById('removed').value))
-        </script>
-    </head>
-    <body>
-        <input type="text" id="weight">
-        <!--//replace check function.-->
-        <button onclick="check()">Check Baggage</button>
-<p>
-        <input type="text" id="removed" style='display:none;'>
-        <!--//replace remove function.-->
-        <button id='remB' onclick="remove()" style='display:none;'>Remove this much baggage (kg)</button>
-
-</p>
-
-
 
     </body>
 </HTml>
+
+
+<html>
+    <head>
+        <script src="ex1.js"></script>
+        <script>
+            // Check baggage function
+            let check=()=>{
+                let weight = parseInt(document.getElementById('weight').value);
+                alert('Checking Baggage weight: ' + weight);
+                // If overweight, display removal fields
+                if(weight > 20) { // Example: 20kg is the limit
+                    document.getElementById('removed').style='display:block;';
+                    document.getElementById('remB').style='display:block;';
+                    document.getElementById('result').textContent = '';
+                } else {
+                    document.getElementById('removed').style='display:none;';
+                    document.getElementById('remB').style='display:none;';
+                    document.getElementById('result').textContent = 'Baggage weight is OK to proceed!';
+                }
+            }
+            // Remove weight function
+            let remove=()=>{
+                let weight = parseInt(document.getElementById('weight').value);
+                let removeVal = parseInt(document.getElementById('removed').value);
+                let remaining = weight - removeVal;
+                document.getElementById('weight').value = remaining;
+                if(remaining > 20) {
+                    document.getElementById('result').textContent = 'Still overweight! Remaining baggage: ' + remaining + ' kg';
+                } else {
+                    document.getElementById('result').textContent = 
+                        'Now OK to proceed! Remaining baggage: ' + remaining + ' kg';
+                    document.getElementById('removed').style='display:none;';
+                    document.getElementById('remB').style='display:none;';
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="weight" placeholder="Enter baggage weight (kg)">
+        <button onclick="check()">Check Baggage</button>
+        <p>
+            <input type="text" id="removed" style='display:none;' placeholder="How much to remove?">
+            <button id='remB' onclick="remove()" style='display:none;'>Remove this much baggage (kg)</button>
+        </p>
+        <p id="result" style="font-weight:bold;"></p>
+    </body>
+</html>
