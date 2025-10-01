@@ -16,4 +16,15 @@ let euler1 = () => {
     alert("Sum of multiples of 3 or 5 below 1000 is: " + sum);
 };
 
-let eulerCustom=()=>alert()
+let eulerCustom=()=>{
+
+    let a =parseInt(document.getElementById('a').value);
+    let b =parseInt(document.getElementById('b').value);
+    let n= parseInt(document.getElementById('n').value);
+   if (isNaN(a) || isNaN(b) || isNaN(n)) {
+        alert("Please enter valid numbers for A, B, and N.");
+        return;
+    }
+
+
+}
