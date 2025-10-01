@@ -2,6 +2,9 @@
 //https://projecteuler.net/problem=1
 //ex2 should output the sum of all multiples of a or b less than n
 
+
+
+// Project Euler Problem #1 (multiples of 3 or 5 below 1000)
 // Euler Problem #1
 let euler1 = () => {
     let sum = 0;
