@@ -1,32 +1,38 @@
-<HTml>
-    <head>
-        <script src="ex1.js"></script>
-        <script src="ex2.js"></script>
-    </head>
-    <body>
-        <h1>Exercise 1</h1>
-        <p>        <input type="text" id="weight">
-        <!--//replace check function.-->
-        <button onclick="check()">Check Baggage</button></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    =========================================
+    Template: Basic Web Page Template
+    Author: Husnain Haider
+    Description:
+      This template provides a base structure for projects.
+      Modify <header>, <main>, and <footer> sections as needed.
+    =========================================
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Template Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ===== HEADER SECTION ===== -->
+  <header>
+    <h1>Welcome to Template Project</h1>
+  </header>
 
-<p>
-        <input type="text" id="removed" style='display:none;'>
-        <!--//replace remove function.-->
-        <button id='remB' onclick="remove()" style='display:none;'>Remove this much baggage (kg)</button>
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+    <p>This is a simple HTML structure template. You can expand it easily.</p>
+    <button id="actionBtn">Click Me</button>
+  </main>
 
-</p>
-<p id="result" style="font-weight:bold;"></p>
-<h1>Exercise 2</h1>
-    <p><button onclick="euler1()">Press for solution to project Euler</button>
-</p>
+  <!-- ===== FOOTER SECTION ===== -->
+  <footer>
+    <p>© 2025 Template Project. All rights reserved.</p>
+  </footer>
 
-<p>
-       <label for="a:">A</label> <input type="text" id="a">
-        <label for="b:">B</label><input type="text" id="b">
-       <label for="n:">N</label> <input type="text" id="n">
-
-</p>
-    <p><button onclick="eulerCustom()">Press for custom sum of multiples</button>
-
-    </body>
-</HTml>
+  <!-- ===== SCRIPT LINK ===== -->
+  <script src="script.js"></script>
+</body>
+</html>
