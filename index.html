@@ -1,38 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!--
-    
-    Template: Basic Web Page Template
-    Author: Husnain Haider
-    Description:
-      This template provides a base structure for projects.
-      Modify <header>, <main>, and <footer> sections as needed.
-    
-  -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Template Project</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Shadow DOM with Class Example</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #f8fafc, #e0ecff);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      color: #3a74ff;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+  </style>
 </head>
+
 <body>
-  <!--  HEADER SECTION  -->
-  <header>
-    <h1>Welcome to Template Project</h1>
-  </header>
+  <h1>DOM SHADOW</h1>
+  <my-box></my-box>
 
-  <!--  MAIN CONTENT  -->
-  <main>
-    <p>This is a simple HTML structure template. You can expand it easily.</p>
-    <button id="actionBtn">Click Me</button>
-  </main>
-
-  <!--  FOOTER SECTION  -->
-  <footer>
-    <p>© 2025 Template Project. All rights reserved.</p>
-  </footer>
-
-  <!--  SCRIPT LINK  -->
-  <script src="script.js"></script>
+  <script src="index.js"></script> 
 </body>
 </html>
