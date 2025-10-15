@@ -1,35 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shadow DOM with Class Example</title>
-  <style>
-    body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: linear-gradient(135deg, #f8fafc, #e0ecff);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-    }
-
-    h1 {
-      font-size: 2.2rem;
-      color: #3a74ff;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 40px;
-    }
-  </style>
+  <title>Inventory System</title>
 </head>
-
 <body>
-  <h1>DOM SHADOW</h1>
-  <my-box></my-box>
+  <h2>Product Inventory</h2>
 
-  <script src="index.js"></script> 
+  <input id="id" placeholder="ID"><br>
+  <input id="name" placeholder="Product Name"><br>
+  <input id="price" placeholder="Price"><br>
+  <input id="qty" placeholder="Quantity"><br>
+  <button onclick="addProduct()">Add Product</button>
+  <button onclick="loadProducts()">Show Products</button>
+
+  <div id="output"></div>
+
+  <script src="index.js"></script>
 </body>
 </html>
