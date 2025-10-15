@@ -1,5 +1,4 @@
-const API_URL = "https://github.dev/husnainhaid/b9is123_256_1a/deployments"; 
-// 👆 Replace YOUR-USERNAME with your GitHub username
+const API_URL = "https://refactored-computing-machine-r47pp6pxvj9ghprqp-5000.app.github.dev/products";
 
 function loadProducts() {
   fetch(API_URL)
